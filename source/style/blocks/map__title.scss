@@ -1,0 +1,15 @@
+.map__title{
+    max-width: 240px!important ;
+    @include phone{
+        font-size: 35px !important;
+        &:after, &:before{
+            display: none !important;
+        }
+    }
+    @include tablet{
+        font-size: 35px !important;
+        &:after, &:before{
+            display: none !important;
+        }
+    }
+} 

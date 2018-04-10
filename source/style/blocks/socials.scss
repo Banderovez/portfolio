@@ -1,0 +1,39 @@
+.hero__socials{
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    @include phone{
+        top: 15px;
+        left: 10px;
+    }
+    @include tablet{
+        top: 31px;
+        left: 24px;
+    }
+}
+.socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.socials__item{
+    width: 33px;
+    height: 25px;
+    margin-right: 27px;
+    opacity: .5
+}
+.socials__item:hover{
+    opacity: 1;
+}
+.socials__item:last-child{
+    margin: 0;
+}
+.socials__link_vk{
+    @include social__item('vk.svg');
+}
+.socials__link_gh{
+    @include social__item('github.svg');
+}
+.socials__link_in{
+    @include social__item('in.svg');
+}

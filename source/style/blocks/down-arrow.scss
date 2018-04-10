@@ -1,0 +1,15 @@
+    .down-arrow{
+    @include centered(x);
+    bottom: 70px;
+    opacity: .5;
+    z-index: 2;
+    @include phone{
+        bottom: 50px;   
+    }
+    @include tablet{
+        bottom: 50px;   
+    }
+}
+.down-arrow:hover{
+    opacity: 1;
+}

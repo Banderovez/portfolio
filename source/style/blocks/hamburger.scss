@@ -1,0 +1,19 @@
+.hamburger{
+    display: block;
+    background: url('../img/hamburger.svg') no-repeat center center;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+}
+.hero__hamburger{
+    top: 25px;
+    right: 30px;
+    @include phone{
+        top: 10px;
+        right: 11px;
+    }
+    @include tablet{
+        top: 28px;
+        right: 24px;
+    }
+}

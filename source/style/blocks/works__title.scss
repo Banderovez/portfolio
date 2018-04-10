@@ -1,0 +1,47 @@
+.works__title{
+    text-align: center;
+    background-color: $worksColor;
+}
+.works__section-title{
+    padding:  40px 80px;
+    display: inline-block;
+    position: relative;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:after, &:before{
+        content: "";
+        display: block;
+        @include centered(y);
+        background: rgba($main-font-color, .2);
+        width: 22px;
+        height: 5px;;
+    }
+    &:after{
+        right: $margin;
+    }
+    &:before{
+        left: $margin;
+    }
+    @include tablet{
+      font-size: 49px;
+        &:after{
+            display: none;
+        }    
+        &:before{
+          display: none;
+        }
+    };
+    @include phone{
+        font-size: 35px;
+        padding: 10px 10px;
+        width: 100%;
+    &:after{
+        display: none;
+    }    
+    &:before{
+      display: none;
+    }
+    background-position: center top;
+  }
+}

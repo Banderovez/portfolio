@@ -1,0 +1,26 @@
+.contacts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+.contacts__item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.contacts__item:last-child{
+    margin: 0;
+}
+.contacts__item__image{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.contacts__item__text a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Roboto-Medium', sans-serif;
+    color: #708288;
+}

@@ -1,0 +1,9 @@
+.section-title{
+    display: inline-block;
+    @include phone{
+        display: none;
+    }
+    @include tablet{
+        display: none;
+    }
+}

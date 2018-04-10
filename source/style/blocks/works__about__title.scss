@@ -1,0 +1,24 @@
+.works__about__title{
+  background-position: center top;
+  padding: 40px 80px;
+  &:after, &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 80px;
+      background: rgba($main-font-color, .2);
+      width: 22px;
+      height: 5px;
+  }
+  @include phone{
+    font-size: 35px;
+    padding: 10px 10px;
+    &:after{
+      display: none;
+    }    
+    &:before{
+      display: none;
+    }
+    background-position: center top;
+  }
+}

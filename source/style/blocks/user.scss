@@ -1,0 +1,36 @@
+.user__photo{
+    margin-bottom: 35px;
+}
+.user__photo-img{
+    border-radius: 50%;
+}
+.user__name{
+    font-family: "Roboto-medium", sans-serif;
+    font-size: 35px;
+    color: #fff;
+    @include phone{
+        font-size: 21px;
+    }
+    @include tablet{
+        font-size: 35px;
+    }
+}
+.user__descr{
+    font-family: "Roboto-Regular", sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .6);
+    @include phone{
+        font-size: 14px;
+    }
+    @include tablet{
+        font-size: 16px;
+    }
+}
+.user-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include phone{
+        width: 100%;
+    }
+}

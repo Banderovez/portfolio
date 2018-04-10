@@ -1,0 +1,52 @@
+.subtitle{
+    color: #455a64;
+    font-family: Bernier, sans-serif;
+    font-size: 35px;
+    position: relative;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 30px;
+    text-align: center;
+    &:after, &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 65px;
+        background: rgba($main-font-color, .2);
+        width: 22px;
+        height: 5px;
+    }
+    &:after{
+        right: 0;
+    }
+    &:before{
+        left: 0;
+    }
+    @include phone{
+        font-size: 21px;
+        padding: 15px 40px;
+        &:after, &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 27px;
+            background: rgba($main-font-color, .2);
+            width: 22px;
+            height: 5px;
+        }
+    }
+    @include tablet{
+        font-size: 30px;
+        padding: 15px 40px;
+        &:after, &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 33px;
+            background: rgba($main-font-color, .2);
+            width: 22px;
+            height: 5px;
+        }
+    }
+}

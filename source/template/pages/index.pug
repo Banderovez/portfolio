@@ -1,0 +1,92 @@
+extends ../_template.pug
+
+block variables
+    - var title = 'About' 
+block inlineStyles
+
+block content
+    .wrapper
+        section.section.hero
+            .hero__bg
+                img(src="assets/img/portfolio.jpg", alt="background")
+            ul.socials.hero__socials
+                li.socials__item
+                    a(href="").socials__link.socials__link_vk
+                li.socials__item
+                    a(href="https://github.com/").socials__link.socials__link_gh 
+                li.socials__item
+                    a(href="").socials__link.socials__link_in 
+            a(href="").hamburger.hero__hamburger
+
+            a(href="").down-arrow
+                img(src="assets/img/arrow_down.svg", alt="arrow_down")
+
+            .hero__title
+                img(src="assets/img/portfolio-header1.png", alt="caption").section-title
+                .user.hero__user-block
+                    .user__photo
+                        .user__photo-avatar
+                            img(src="assets/img/user.jpg", alt="user-photo").user__photo-img
+                    .user__name Олександр Онишко
+                    .user__descr Особистий сайт веб-розробника
+            svg.triangle.triangle_fill_white.about__triangles(viewbox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(points="0,0 0,100 1000,100")
+            svg.triangle.triangle_fill_beige.about__triangles(viewbox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(points="0,100 1000,100 1000,0")
+
+        section.section.about
+            .about__left    
+                +title('About me','about-header.png','about__section-title')
+                .user-about
+                    .user-about__picture
+                        img(src="assets/img/left-avatar.png", alt="caption")
+                    +subtitle("Who am I", 'user-about__title')
+                    .user-about__text
+                        +paragraph("I'm a web-developer from Lviv. I'm 18 years old. I'm developing modern websites and applications. I like to do interesting and modern projects.")
+                        +paragraph("I created this website studying in online-school named 'LoftSchool'. Look how beautiful is it. I created this website studying in online-school named 'LoftSchool'. Look how beautiful is it. I created this website studying in online-school named 'LoftSchool'. Look how beautiful is it. I created this website studying in online-school named 'LoftSchool'. Look how beautiful is it. I created this website studying in online-school named 'LoftSchool'. Look how beautiful is it.")
+            .about__right
+                .about-data
+                    .about-data_description.about-user-info
+                        +subtitle("What can I do for you", 'about-user-info__title')
+                        .about-user-info__text
+                            +paragraph("I created this website studying in online-school named 'LoftSchool'. Look how beautiful is it.")                    
+                        .about-data__content
+                            ul.skills
+                                li.skills__item
+                                    - var skillTitles = ['Frontend', 'Backend', 'Workflow'];
+                                    - var skills = [['PHP', 'mySQL', 'Node.js&\nnpm', 'Mongo.db'], ['PHP', 'mySQL', 'Node.js&\nnpm', 'Mongo.db'], ['Git', 'Bower', 'Gulp']];
+                                    - var percents = [[50, 9, 40], [50, 29, 90, 70], [90, 20, 80]];
+                                    - for(var i = 0; i < skillTitles.length; i++)
+                                         .skill-section
+                                            +skillTitle(skillTitles[i])
+                                            ul.skill-section__list
+                                                -for(var k = 0; k < skills[i].length; k++)
+                                                        li.skill-section__item
+                                                            +skill(skills[i][k], percents[i][k])
+        section.section.map
+            #map
+            .map__contacts
+                +subtitle("Contacts", 'map__title')   
+                ul.contacts
+                    -var imageArray = ['skype.svg', 'envelope.svg', 'phone.svg', 'map_marker.svg'];
+                    -var textArray = ['skype_banderovez', 'patriot00ukrainu@gmai.com', '+380502519014', 'Lviv, Shevchenko street'];
+                    -for(var i = 0; i < imageArray.length; i++)
+                        +contactItem(textArray[i], imageArray[i])
+            .footer
+                .footer__top-part
+                    ul.footer__navigation
+                        each item in ['My works', 'About me', 'Blog', 'Autorization']
+                            li.footer__navigation__item
+                                a(href="")=item
+                    ul.socials.footer__socials
+                        li.socials__item
+                            a(href="").socials__link.socials__link_vk
+                        li.socials__item
+                            a(href="https://github.com/").socials__link.socials__link_gh 
+                        li.socials__item
+                            a(href="").socials__link.socials__link_in 
+                .footer__bottom-part
+                    .footer__bottom-part__text
+                        p I am a web-developer from Lviv and I created this website studying in online-school named 'LoftSchool'. 
+                    .footer__bottom-part__copyrights
+                        p &#9400;Oleksandr Onyshko | Made at Lofschool with Love | 2018

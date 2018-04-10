@@ -1,0 +1,16 @@
+$beige: #f2f0e8;
+$white: #f4f5f0;
+$worksColor: #faf8f0;
+$circleLength: 22;
+$main-font-color: #373e42;
+@import "common/normalize.scss";
+@import "common/setups.scss";
+@import "common/_fonts.scss";
+
+//mixins
+
+@import "helpers/mixins.scss";
+
+@import "blocks/**/*";
+
+

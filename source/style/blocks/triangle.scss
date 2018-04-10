@@ -1,0 +1,32 @@
+.triangle{
+    width: 50%;
+    height: 110px;
+    z-index: 1;
+    &_fill {
+
+        &_white{
+            fill: $white;
+        }
+    
+        &_beige{
+            fill: $beige;
+        }
+    }
+    @include phone{
+        height: 27px;
+        &_fill {
+            &_beige{
+                fill: $white;
+            }
+        }
+    }
+    @include tablet{
+        height: 66px;
+        &_fill {
+            &_beige{
+                fill: $white;
+            }
+        }
+    }
+}
+

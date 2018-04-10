@@ -1,0 +1,6 @@
+.user-about__picture{
+    text-align: center;
+    @include phone{
+        width: 100%;
+    }
+}

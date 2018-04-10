@@ -1,0 +1,136 @@
+.slider{
+  display: flex;
+  height: 100vh;
+  min-height: 650px;
+  display: flex;
+  flex-flow: column wrap;
+  @include tablet{
+    flex-flow: column nowrap;
+    height: auto;
+  };
+  @include phone{
+    flex-flow: column nowrap;
+    height: auto;
+  };
+}
+
+.slider__descr{
+    background-color: #f0efe9;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 50%;
+    @include tablet{
+      width: 100%;
+      height: auto;
+    };
+    @include phone{
+      width: 100%;
+      height: auto;
+    };
+}
+
+.slider__descr-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet{
+      width: 100%;
+      padding: 40px 20px 60px;
+    };
+    @include phone{
+      width: 100%;
+    };
+}
+
+.slider__descr-title{
+}
+
+.slider__descr-skills{
+    padding: 20px 0;
+    border-top: 1px solid #acd6ce;
+    border-bottom: 1px solid #acd6ce;
+    color: #00bfa5;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 40px;
+    width: 100%;
+    @include tablet{
+      padding: 20px 75px;
+      width: auto;
+    };
+    @include phone{
+      padding: 20px 75px;
+      width: 100%;
+      margin-bottom: 20px;
+    };
+}
+
+.slider__display{
+  background-color: #efebe0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70%;
+  width: 50%;
+  @include tablet{
+    width: 100%;
+    order: 3;
+    height: 530px;
+  };
+  @include phone{
+    width: 100%;
+    order: -1;
+    height: 258px;
+  };
+}
+
+.slider__display-picture {
+  max-height: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.slider__descr-btn{
+    margin: 40px 0;
+    text-align: center;
+    @include tablet{
+      margin: 0;
+    };
+    @include phone{
+      margin-top: 0;
+    };
+}
+
+.slider__btns {
+  min-height: 100px;
+  height: 30%;
+  display: flex;
+  width: 50%;
+  @include tablet{
+    width: 100%;
+    order: 4;
+    min-height: 215px;
+  };
+  @include phone{
+    width: 100%;
+    order: 4;
+    min-height: 156px;
+  };
+}
+
+.slider__btn {
+  min-height: 100%;
+  flex: 1;
+  &_left {
+    background: url('../img/up.jpg') center center no-repeat;
+    background-size: cover;
+  }
+  &_right {
+    background: url('../img/down.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}

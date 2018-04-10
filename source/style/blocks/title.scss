@@ -1,0 +1,44 @@
+$margin: 40px;
+.title{
+    color: $main-font-color;
+    font-size: 63px;
+    font-family: Bernier;
+    text-transform: uppercase;
+    padding:  70px 80px;
+    max-width: 665px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &:after, &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 115px;
+        background: rgba($main-font-color, .2);
+        width: 22px;
+        height: 5px;
+    }
+    &:after{
+        margin-right: 80px;
+        right: 0;
+        @include tablet{
+            display: none;
+        }
+        @include phone{
+            display: none;
+        }
+
+    }
+    &:before{
+        margin-right: 22px;
+        @include tablet{
+            display: none;
+        }
+        @include phone{
+            display: none;
+        }
+    }
+}

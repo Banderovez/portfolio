@@ -1,0 +1,23 @@
+.hero{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    @include phone{
+        height: 100vh;
+    }
+}
+
+.hero__title{
+    @include centered(y);
+    text-align: center;
+    width: 100%;
+}
+.hero__user-block{
+    @include centered(both);
+    @include phone{
+        width: 100%;
+    }
+    @include tablet{
+        width: 100%;
+    }
+}

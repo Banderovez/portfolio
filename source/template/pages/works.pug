@@ -1,0 +1,111 @@
+extends ../_template.pug
+
+block variables 
+    - var title= 'Works'
+
+block content
+    .wrapper
+        section.section.hero
+            .hero__bg
+                img(src="assets/img/portfolio.jpg", alt="background")
+            ul.socials.hero__socials
+                li.socials__item
+                    a(href="").socials__link.socials__link_vk
+                li.socials__item
+                    a(href="https://github.com/").socials__link.socials__link_gh 
+                li.socials__item
+                    a(href="").socials__link.socials__link_in 
+            a(href="").hamburger.hero__hamburger
+
+            a(href="").down-arrow
+                img(src="assets/img/arrow_down.svg", alt="arrow_down")
+
+            .hero__title
+                img(src="assets/img/portfolio-header1.png", alt="caption").section-title
+                .user.hero__user-block
+                    .user__photo
+                        .user__photo-avatar
+                            img(src="assets/img/user.jpg", alt="user-photo").user__photo-img
+                    .user__name Олександр Онишко
+                    .user__descr Особистий сайт веб-розробника
+            svg.triangle.triangle_fill_white.about__triangles.works__triangles(viewbox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(points="0,0 0,100 1000,100")
+            svg.triangle.triangle_fill_beige.about__triangles.works__triangles(viewbox="0 0 1000 100" preserveAspectRatio="none")
+                polygon(points="0,100 1000,100 1000,0")
+        .works__title
+            +title('Мои работы','works_header.svg','works__section-title')
+        section.section.slider  
+            .slider__descr
+                .slider__descr-info
+                    .slider__descr-title
+                        +subtitle("Online-school's website", 'slider__subtitle')
+                    .slider__descr-skills
+                        | HTML, CSS, JavaScript
+                    .slider__descr-btn
+                        a(href="#").btn Look at the website
+            .slider__display
+                img(src="assets/img/1.png", alt="").slider__display-picture
+            .slider__btns
+                a(href="#").slider__btn.slider__btn_left
+                a(href="#").slider__btn.slider__btn_right
+        section.section.works__about
+          +title('What people say about me','works_header.svg','works__about__title')
+          .works__about__feedback
+            .feedback__item
+              +paragraph("Цей код витримає любі випробування. Але будь-ласка, не завантажуйте сайт на дуже старих браузерах!")
+              .feedback__item__avatar
+                .avatar__photo
+                  img(src="" alt="")
+                .avatar__descr
+                  .avatar__title Володимир Сабанцев
+                  .avatar__def Викладач                    
+            .feedback__item
+              +paragraph("Це хлопець навчався не десь там, а в Loftschool. Два місяці найтяжчих випробувань і безсонних ночей!")
+              .feedback__item__avatar
+                .avatar__photo
+                  img(src="" alt="")
+                .avatar__descr
+                  .avatar__title Ковальчук Дмитро
+                  .avatar__def Засновник Loftschool
+          .works__about__form
+            form(action="" method="").works__form
+              .form__subtitle
+                +subtitle("Зв'язатись зі мною", 'works__form__subtitle')
+              .form__inputs
+                input(type="text" placeholder="Ваше ім'я").works__input
+                input(type="text" placeholder="Email").works__input
+                textarea(placeholder="Your message").works__placeholder
+              .form__buttons
+                button().form__button.form__button__left Відправити
+                button().form__button.form__button__right Відправити
+
+          a(href="").form__arrow
+                img(src="assets/img/arrow_down.svg", alt="arrow_down")
+          .footer.form__footer
+            .footer__top-part
+                ul.footer__navigation
+                    each item in ['My works', 'About me', 'Blog', 'Autorization']
+                        li.footer__navigation__item
+                            a(href="")=item
+                ul.socials.footer__socials
+                    li.socials__item
+                        a(href="").socials__link.socials__link_vk
+                    li.socials__item
+                        a(href="https://github.com/").socials__link.socials__link_gh 
+                    li.socials__item
+                        a(href="").socials__link.socials__link_in 
+            .footer__bottom-part
+                .footer__bottom-part__text
+                    p I am a web-developer from Lviv and I created this website studying in online-school named 'LoftSchool'. 
+                .footer__bottom-part__copyrights
+                    p &#9400;Oleksandr Onyshko | Made at Lofschool with Love | 2018
+
+
+            
+                    
+                  
+            
+        
+
+
+        

@@ -1,0 +1,34 @@
+.skill-circle {
+    fill: none;
+    stroke: #dfdcd5;
+    stroke-width: 20;
+  }
+.sector {
+    stroke-dasharray: 345;
+    stroke: #16c2aa;
+    animation: dash 2s linear;
+    @include phone{
+        animation: none;
+    }
+    @include tablet{
+        animation: none;
+    }
+}
+.skill{
+    position: relative;
+}
+.skill-name{
+    position: absolute;
+    @include centered(both);
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 14px;
+    color: #10c1a8;
+}
+@keyframes dash{
+    from{
+        stroke-dashoffset: 345;
+    }
+    to{
+        stroke-dashoffset: attr('.sector');
+    }
+}

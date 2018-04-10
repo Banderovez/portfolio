@@ -1,0 +1,10 @@
+.user-about__text{
+    width: 443px;
+    @include phone{
+        width: 100%;
+        padding: 0 10px;
+    }
+    @include tablet{
+        width: 443px;
+    }
+}

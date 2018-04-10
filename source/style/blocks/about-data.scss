@@ -1,0 +1,7 @@
+.about-data_description{
+    text-align: center;
+    padding: 0 10px 0 40px;
+    @include phone{
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,25 @@
+mixin title(title, url, additionalClass)
+    .title(style=`background-image: url('assets/img/${url}')` class=additionalClass)=title
+
+mixin subtitle(title, additionalClass)
+    .subtitle(class=additionalClass)=title
+
+mixin paragraph(title)
+    p(class="paragraph")=title
+
+mixin skillTitle(title)
+    .skill-section__title=title
+
+mixin skill(skillName, percent, additionalClass)
+        .skill
+            svg(width="130" height="130").skill-circle
+                circle(r="55" cx="65" cy="65" fill="none")
+                circle(transform="rotate(-90 65 65)" stroke-dashoffset=345 - 345/100*percent r="55" cx="65" cy="65" stroke="#16c2aa" class=additionalClass).sector
+            .skill-name=skillName     
+
+mixin contactItem(text, photo)
+    li.contacts__item
+        .contacts__item__image
+            img(src="assets/img/" + photo, alt=photo)
+        .contacts__item__text
+            a(href="")=text

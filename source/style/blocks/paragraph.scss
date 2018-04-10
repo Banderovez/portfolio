@@ -1,0 +1,12 @@
+.paragraph{
+    font-size: 16px;
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #455a64;
+    margin-bottom: 15px;
+    @include phone{
+        font-size: 14px;
+    }
+    @include tablet{
+        font-size: 14px;
+    }
+}
